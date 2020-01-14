@@ -3,6 +3,7 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
+/* Global style */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,115 @@ h1, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-#title {
-    font-size: 4.5rem;
+a {
+    color: black;
 }
 
+/* Header style */
+header div {
+    background-color: #2f2f2f;
+    width: 85vw;
+    height: 25vh;
+}
+
+header div img {
+    position: relative;
+    top: 8vh;
+    left: 5vw;
+    width: 50px;
+}
+
+#title {
+    font-size: 5rem;
+    text-align: right;
+    width: 80vw;
+}
+
+#title::after {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: 15px;
+    height: 20px;
+    background-color: black;
+    z-index: 9;
+}
+
+/* Tribute Area style */
+#tribute {
+    background-color: #e2e2e2;
+    width: 85vw;
+    position: relative;
+    top: -25px;
+    display: flex;
+    flex-direction: row;
+    padding: 3em 5em;
+}
+
+#tribute figure {
+    background-color: #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Sub-Tribute Area style */
+#subtribute {
+    background-color: #2f2f2f;
+    width: 75vw;
+    float: right;
+    border-left: 20px solid black;
+}
+
+#img-div {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#img-div #image {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#img-div figcaption {
+    width: 65%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+#subtribute h2 {
+    color: #e2e2e2;
+    text-align: right;
+    line-height: 40vh;
+    padding-right: 5em;
+    padding-top: 1em;
+    font-size: 2.5rem;
+}
+
+#subtribute h2 a {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+#subtribute h2 a:hover {
+    background-color: #e2e2e2;
+    color: #2f2f2f;
+}
+
+/* Footer style */
+footer {
+    background-color: black;
+    color: #e2e2e2;
+    width: 100vw;
+    height: 8vh;
+    float: left;
+}
+
+footer h6 {
+    line-height: 8vh;
+    margin-left: 6vw;
+}
