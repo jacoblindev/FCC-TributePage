@@ -31,13 +31,13 @@ header div {
 
 header div img {
     position: relative;
-    top: 8vh;
-    left: 5vw;
+    top: calc(-25px + 50%);
+    left: calc(-25px + 10%);
     width: 50px;
 }
 
 #title {
-    font-size: 5rem;
+    font-size: 6vw;
     text-align: right;
     width: 80vw;
 }
@@ -46,8 +46,8 @@ header div img {
     content: "";
     display: block;
     position: relative;
-    bottom: 15px;
-    height: 20px;
+    bottom: 1vh;
+    height: 2.5vh;
     background-color: black;
     z-index: 9;
 }
@@ -57,25 +57,50 @@ header div img {
     background-color: #e2e2e2;
     width: 85vw;
     position: relative;
-    top: -25px;
+    top: -2.5vh;
     display: flex;
     flex-direction: row;
-    padding: 3em 5em;
+    padding: 3em 4.5em;
+    padding-bottom: 12em;
 }
 
 #tribute figure {
-    background-color: #d8d8d8;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    flex: 40%;
+}
+
+#tribute figure img {
+    width: 100%;
+}
+
+#tribute figure figcaption {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 5px;
+}
+
+#tribute article {
+    flex: 60%;
+    padding-left: 3em;
+    font-size: 1rem;
+}
+
+#tribute article p {
+    padding-bottom: 1em;
+    text-align: justify;
 }
 
 /* Sub-Tribute Area style */
 #subtribute {
     background-color: #2f2f2f;
-    width: 75vw;
+    width: 80vw;
+    border-left: 2.5vh solid black;
+    position: relative;
+    top: -200px;
+    margin-bottom: -200px;
     float: right;
-    border-left: 20px solid black;
 }
 
 #img-div {
@@ -91,20 +116,20 @@ header div img {
 
 #img-div figcaption {
     width: 65%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.65);
     padding: 1em;
     position: absolute;
     bottom: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 #subtribute h2 {
     color: #e2e2e2;
     text-align: right;
-    line-height: 40vh;
     padding-right: 5em;
-    padding-top: 1em;
-    font-size: 2.5rem;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    font-size: 3vw;
 }
 
 #subtribute h2 a {
@@ -122,11 +147,81 @@ footer {
     background-color: black;
     color: #e2e2e2;
     width: 100vw;
-    height: 8vh;
     float: left;
 }
 
 footer h6 {
     line-height: 8vh;
     margin-left: 6vw;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 800px) {
+    /* Header style */
+    header div {
+        width: 100vw;
+        height: 20vh;
+    }
+
+    header div img {
+        left: calc(-25px + 20%);
+    }
+
+    #title {
+        font-size: 8.5vw;
+        text-align: right;
+        width: 95vw;
+    }
+
+    #title::after {
+        height: 2vh;
+    }
+    
+    /* Tribute Area style */
+    #tribute {
+        width: 100vw;
+        top: -2vh;
+        flex-direction: column;
+        padding: 5vw;
+    }
+
+    #tribute figure {
+        margin-top: 1em;
+    }
+
+    #tribute article {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 0;
+    }
+
+    /* Sub-Tribute Area style */
+    #subtribute {
+        width: 100vw;
+        border-left: 0 solid black;
+        top: -20px;
+        margin-bottom: -20px;
+        float: none;
+    }
+
+    #img-div figcaption {
+        width: 100%;
+        position: unset;
+        bottom: 0;
+    }
+
+    #subtribute h2 {
+        text-align: center;
+        padding-right: 0;
+        padding-top: 4em;
+        padding-bottom: 3em;
+        font-size: 8vw;
+    }
+
+    /* Footer style */
+    footer h6 {
+        margin-left: 0;
+        text-align: center;
+    }
+
 }
